@@ -1,0 +1,14 @@
+Buffer policy
+1. We used LRU, with a separate hashmap for maintaining the number of times a page was accessed.
+2. We also had to implement insertTuple and deleteTuple, which were being invoked in the test cases.
+
+BTreeFile
+1. We used the reverse iterator till the middle index to identify the tuples that we had to split.
+
+2. In split leaf we copied the first tuple in the second leaf to the parent.
+
+3. We had to use a separate stack for the tuples in splitLeaf as iterator on Tuples along with deleteTuple does not work.
+
+4. We also found out that during insertion into new leaf node, delete has to be done first otherwise the record id changes and delete throws an error.
+
+5. We had to modify our implementation of Tuple and Tupledesc to handle null values in fields better.

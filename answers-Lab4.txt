@@ -1,0 +1,7 @@
+Int histogram was straight forward, maintaining 3 maps for the min max values.
+Join optimizer wa fairly straight forward, maintaining a set for the unique plans.
+
+We found errors in our TupleDesc and SeqScan classes, which we had to fix for query test to work.
+We also had to fix HeapFile.java to close files after every read.
+
+We followed the pseudo code and guidelines given in the lab document everywhere else.

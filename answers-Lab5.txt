@@ -1,0 +1,5 @@
+Created a lock manager to handle locking
+It has a hashmap of shared locks and X lock over pages.
+before acquiring a lock, an intention is recorded based on which deadlock is checked.
+Eviction policy in buffer pool was changed to check dirty pages.
+Force policy was implemented to flush on commit.

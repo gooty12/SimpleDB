@@ -1,0 +1,13 @@
+Aggregate.java
+Fetch only returns the next tuple. Merge is being done earlier in a separate method.
+
+HashEquijoin.java
+We are using a java.util map to hash the fields in one of the childs. In fetch next we look up the matching tuples in the map.
+
+Join.java
+In a nested loop, we are simply iterating over all the matching tuples. We have to maintain the firstTuple to ensure we do not select tuples randomly.
+
+StringAggregator and IntegerAggregator.java
+We are maintaining the merged tuples in a list. The iterator of that list is being returned in DB iterator.
+
+Some changes to tupleDesc.java was required. We were earlier comparing tuple field names, which was removed and corrected.

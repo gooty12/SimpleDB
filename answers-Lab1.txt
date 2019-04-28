@@ -1,0 +1,26 @@
+TupleDesc
+Used number of fields currently for the hash function, will be improved with later implementation.
+
+Catalog
+Initialized all required variables (as mentioned in JavaDoc) to HashMap.
+The Maps are initialized when the constructors are called.
+
+BufferPool
+Created a concurrent HashMap for the pages.
+
+HeapPageId
+Used table id and page number for hash code, will be improved with later implementation.
+
+RecordId
+Used hashcode on pid
+
+HeapPage
+Created an inner class for the iterator.
+
+HeapFile
+Created an inner class for the fileIterator.
+Used random access file object to read from an offset value in the DbFile.
+
+We spent close to 12 hours on the project.
+We spent a chunk of our time understanding the format of the File object that heapFile class would be recieving.
+There was also some churn involved in understanding and debugging the test cases, as the testUtil class has a lot of methods.
